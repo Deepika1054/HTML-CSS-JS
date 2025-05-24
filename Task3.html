@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joke Generator</title>
+  <link rel="stylesheet" href="/Task3.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>😂 Random Joke Generator</h1>
+    <p id="joke">Click the button to get a joke!</p>
+    <button id="get-joke">Tell me a joke</button>
+  </div>
+  <script>
+   const jokeEl = document.getElementById("joke");
+const button = document.getElementById("get-joke");
+
+async function getJoke() {
+  jokeEl.textContent = "Loading...";
+
+  try {
+    const res = await fetch("https://v2.jokeapi.dev/joke/Any?type=single");
+    const data = await res.json();
+
+    if (data.joke) {
+      jokeEl.textContent = data.joke;
+    } else {
+      jokeEl.textContent = "Couldn't fetch a joke. Try again!";
+    }
+  } catch (error) {
+    jokeEl.textContent = "Error getting joke.";
+    console.error(error);
+  }
+}
+
+button.addEventListener("click", getJoke);
+
+  </script>
+</body>
+</html>
