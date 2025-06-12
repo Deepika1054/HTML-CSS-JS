@@ -1,0 +1,145 @@
+/* --- Global Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #d84315;
+}
+
+a {
+  text-decoration: none;
+  color: #d84315;
+}
+
+a:hover {
+  color: #ff7043;
+}
+
+/* --- Header / Navigation --- */
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a.active {
+  border-bottom: 2px solid #d84315;
+}
+
+/* --- Sections --- */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu h2, .about-section h2, .contact-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* --- Menu Page --- */
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.menu-section .item {
+  width: 220px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+}
+
+.menu-section .item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-section .item h3 {
+  margin: 10px 0 5px;
+}
+
+.menu-section .item p {
+  color: #666;
+}
+
+/* --- About Page --- */
+.about-section {
+  margin-bottom: 40px;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.team-member {
+  text-align: center;
+  width: 200px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* --- Contact Page --- */
+.contact-section {
+  text-align: center;
+}
+
+.contact-info {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #fbe9e7;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: #444;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delish Dine | About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>About Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Our Story -->
+  <section class="about-section">
+    <h2>Our Story</h2>
+    <p>
+      Founded in 2021, <strong>Delish Dine</strong> began with a simple idea – bring high-quality, freshly prepared meals to everyone’s doorstep. What started as a small kitchen has now grown into a full-fledged online food delivery service with thousands of happy customers. We take pride in using local ingredients, hiring passionate chefs, and crafting menus that suit every taste.
+    </p>
+  </section>
+
+  <!-- Mission and Vision -->
+  <section class="about-section">
+    <h2>Our Mission</h2>
+    <p>
+      Our mission is to serve healthy, affordable, and mouthwatering meals without compromising on quality or service. We believe in making mealtimes easy and enjoyable by offering a user-friendly ordering system, prompt delivery, and diverse menu options.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      We envision becoming a household name for food delivery in India — loved for our consistency, quality, and customer-first approach. We aim to promote sustainable food practices and support local farmers and food artisans.
+    </p>
+  </section>
+
+  <!-- Meet the Chefs -->
+  <section class="about-section team">
+    <h2>Meet Our Chefs</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="https://cdn.pixabay.com/photo/2017/07/31/11/21/chef-2556960_1280.jpg" alt="Chef Priya">
+        <h3>Chef Priya Sharma</h3>
+        <p>Specializes in North Indian cuisine with 10+ years of culinary experience.</p>
+      </div>
+      <div class="team-member">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/chef-1837150_1280.jpg" alt="Chef Arjun">
+        <h3>Chef Arjun Mehta</h3>
+        <p>Expert in Italian and fusion dishes; known for creative pasta recipes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Commitment -->
+  <section class="about-section">
+    <h2>What Makes Us Special</h2>
+    <ul>
+      <li>✅ Locally sourced ingredients</li>
+      <li>✅ No preservatives or artificial flavoring</li>
+      <li>✅ Fast and safe delivery</li>
+      <li>✅ Customizable and allergy-aware meals</li>
+      <li>✅ 24/7 customer support</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Delish Dine. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+  <!-- Add this to the bottom of your HTML body -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

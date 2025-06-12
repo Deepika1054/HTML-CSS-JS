@@ -1,96 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - MyShop</title>
-  <link rel="stylesheet" href="Task4.css" />
+  <meta charset="UTF-8">
+  <title>Delish Dine | Contact Us</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <!-- Header -->
   <header>
-    <h1>MyShop</h1>
+    <h1>Contact Us</h1>
     <nav>
-      <a href="Task4.html">Home</a>
-      <a href="product.html">Products</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
-  <center>
-  <div class="container">
-    <h1>📝 To-Do List</h1>
-    <form id="todoForm">
-      <input type="text" id="todoInput" placeholder="Enter a new task..." required />
-      <button type="submit">Add Task</button>
-    </form>
-    <ul id="todoList"></ul>
-  </div>
-  </center>
 
-  <main class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </main>
+  <!-- Contact Info Section -->
+  <section class="contact-section">
+    <h2>We'd Love to Hear From You!</h2>
+    <p>Have questions, feedback, or just want to say hi? Reach out to us!</p>
 
+    <div class="contact-info">
+      <p><strong>Email:</strong> support@delishdine.in</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Address:</strong> 123 Food Street, New Delhi, India</p>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <h3>Visit Us</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14014.508640172382!2d77.2101002!3d28.6139392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1b5d85a9b9%3A0x3a47b7a3b8a5e4c5!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1628167752123!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 MyShop. All rights reserved.</p>
+    <p>© 2025 Delish Dine. All rights reserved.</p>
   </footer>
-
   <script>
-    const todoForm = document.getElementById('todoForm');
-const todoInput = document.getElementById('todoInput');
-const todoList = document.getElementById('todoList');
-
-// Load tasks from localStorage
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-function saveTasks() {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-}
-
-function renderTasks() {
-  todoList.innerHTML = "";
-  tasks.forEach((task, index) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      ${task}
-      <button class="delete-btn" onclick="deleteTask(${index})">X</button>
-    `;
-    todoList.appendChild(li);
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form submission
+    alert("Thank you for contacting us! We’ll get back to you shortly.");
+    this.reset(); // Optional: clear the form
   });
-}
-
-function addTask(task) {
-  tasks.push(task);
-  saveTasks();
-  renderTasks();
-}
-
-function deleteTask(index) {
-  tasks.splice(index, 1);
-  saveTasks();
-  renderTasks();
-}
-
-// Handle form submission
-todoForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const newTask = todoInput.value.trim();
-  if (newTask) {
-    addTask(newTask);
-    todoInput.value = '';
-  }
-});
-
-// Initial render
-renderTasks();
-
-  </script>
-
+</script>
 </body>
 </html>

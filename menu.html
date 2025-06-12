@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delish Dine | Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Our Menu</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Menu Categories -->
+  <section class="menu">
+
+    <!-- Starters -->
+    <h2>Starters</h2>
+    <div class="menu-section">
+      <div class="item">
+        <img src="/spring.webp" alt="Spring Rolls">
+        <h3>Veg Spring Rolls</h3>
+        <p>₹149</p>
+      </div>
+      <div class="item">
+        <img src="/garlic.jpeg" alt="Garlic Bread">
+        <h3>Garlic Bread</h3>
+        <p>₹129</p>
+      </div>
+    </div>
+
+    <!-- Main Course -->
+    <h2>Main Course</h2>
+    <div class="menu-section">
+      <div class="item">
+        <img src="/pizza.jpeg" alt="Pizza">
+        <h3>Cheese Pizza</h3>
+        <p>₹299</p>
+      </div>
+      <div class="item">
+        <img src="/burger.jpeg" alt="Burger">
+        <h3>Chicken Burger</h3>
+        <p>₹199</p>
+      </div>
+      <div class="item">
+        <img src="/saphaghetti.jpeg" alt="Pasta">
+        <h3>Spaghetti Pasta</h3>
+        <p>₹249</p>
+      </div>
+      <div class="item">
+        <img src="/biryani.jpeg" alt="Biryani">
+        <h3>Hyderabadi Biryani</h3>
+        <p>₹349</p>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <h2>Desserts</h2>
+    <div class="menu-section">
+      <div class="item">
+        <img src="/brownie.jpeg" alt="Brownie">
+        <h3>Chocolate Brownie</h3>
+        <p>₹119</p>
+      </div>
+      <div class="item">
+        <img src="/vanilla.jpeg" alt="Ice Cream">
+        <h3>Vanilla Ice Cream</h3>
+        <p>₹99</p>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <h2>Drinks</h2>
+    <div class="menu-section">
+      <div class="item">
+        <img src="/lemonade.jpeg" alt="Lemonade">
+        <h3>Fresh Lemonade</h3>
+        <p>₹69</p>
+      </div>
+      <div class="item">
+        <img src="/coffee.webp" alt="Coffee">
+        <h3>Hot Coffee</h3>
+        <p>₹89</p>
+      </div>
+    </div>
+
+  </section>
+  <!-- Add this to the bottom of your HTML body -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
